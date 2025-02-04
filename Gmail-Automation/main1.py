@@ -6,9 +6,8 @@ smtp_server = "smtp.gmail.com"
 sender_email = "arash.sn.work@gmail.com"
 receiver_email = "s89748476@gmail.com"
 
-message = """\
+message = """
 Subject: Hi there
-
 This message is sent from Python."""
 
 context = ssl.create_default_context()

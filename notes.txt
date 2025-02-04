@@ -1,0 +1,4 @@
+S2 :
+PyQT5 or Tkinter
+Create a GUI for verifying users with email.
+HTTP & HTTP METHODS

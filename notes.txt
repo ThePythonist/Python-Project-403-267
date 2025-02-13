@@ -2,3 +2,13 @@ S2 :
 PyQT5 or Tkinter
 Create a GUI for verifying users with email.
 HTTP & HTTP METHODS
+
+S3 :
+QT Designer
+How To Send Get Request Using Python
+Fetch Tether Price From This Endpoint : https://api.nobitex.ir/v3/orderbook/USDTIRT
+
+S4 :
+Whats timestamp ?
+Extract temperature, humidity, time(dt), wind speed
+Normalizer : temperature (celsius), time(datetime)

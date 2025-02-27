@@ -12,3 +12,6 @@ S4 :
 Whats timestamp ?
 Extract temperature, humidity, time(dt), wind speed
 Normalizer : temperature (celsius), time(datetime)
+
+S5 :
+Convert normalizer function into a decorator and use it on get_weather_data

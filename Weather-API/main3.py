@@ -8,8 +8,9 @@ def normalizer(data):
     temp = float(str(data['main']['temp'] - 273.15)[:4])
     humidity = data['main']['humidity']
     wind_speed = data['wind']['speed']
+    city = data['name']
 
-    return {'dt': dt, 'temp': temp, 'wind_speed': wind_speed, 'humidity': humidity}
+    return {'city': city, 'dt': dt, 'temp': temp, 'wind_speed': wind_speed, 'humidity': humidity}
 
 
 def get_weather_data(url, city):

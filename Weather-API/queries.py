@@ -4,9 +4,11 @@ conn = sqlite3.connect("weather_data.db")
 cur = conn.cursor()
 
 
-def create():
+def create(data):
+    # motmaen mishid table ijad shode bashe
+    # motmaen mishid
     pass
 
 
-def read():
+def read(city):
     pass

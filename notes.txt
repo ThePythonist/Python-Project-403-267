@@ -15,3 +15,6 @@ Normalizer : temperature (celsius), time(datetime)
 
 S5 :
 Convert normalizer function into a decorator and use it on get_weather_data
+Save fetched city data into database
+Search : What is git
+Install git windows

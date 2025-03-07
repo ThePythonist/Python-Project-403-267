@@ -18,3 +18,8 @@ Convert normalizer function into a decorator and use it on get_weather_data
 Save fetched city data into database
 Search : What is git
 Install git windows
+
+S6 :
+Beautifulsoup
+Selenium
+fetch : seke imami, nim seke, rob seke, dollar, tala 18

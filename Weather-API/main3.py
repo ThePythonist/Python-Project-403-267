@@ -1,18 +1,22 @@
-from queries import create, read
 import requests
 from datetime import datetime
 
 
-def normalizer(data):
-    dt = str(datetime.fromtimestamp(data['dt']))
-    temp = float(str(data['main']['temp'] - 273.15)[:4])
-    humidity = data['main']['humidity']
-    wind_speed = data['wind']['speed']
-    city = data['name']
+def normalizer(func):
+    def wrapper(url, city):
+        data = func(url, city)
+        dt = str(datetime.fromtimestamp(data['dt']))
+        temp = float(str(data['main']['temp'] - 273.15)[:4])
+        humidity = data['main']['humidity']
+        wind_speed = data['wind']['speed']
+        city = data['name']
 
-    return {'city': city, 'dt': dt, 'temp': temp, 'wind_speed': wind_speed, 'humidity': humidity}
+        return {'city': city, 'dt': dt, 'temp': temp, 'wind_speed': wind_speed, 'humidity': humidity}
+
+    return wrapper
 
 
+@normalizer
 def get_weather_data(url, city):
     params = {
         "q": city,
@@ -24,9 +28,10 @@ def get_weather_data(url, city):
 
     if data['cod'] == '404':
         print("Invalid city name")
+        return {}
     else:
-        data = normalizer(data)
-        print(data)
+        return data
 
 
-get_weather_data(url="https://api.openweathermap.org/data/2.5/weather", city=input("City : "))
+# Call the function
+print(get_weather_data(url="https://api.openweathermap.org/data/2.5/weather", city=input("City : ")))

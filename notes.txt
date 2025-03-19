@@ -22,4 +22,7 @@ Install git windows
 S6 :
 Beautifulsoup
 Selenium
-fetch : seke imami, nim seke, rob seke, dollar, tala 18
+Fetch : seke imami, nim seke, rob seke, dollar, tala 18
+
+S7 :
+Fetch coin prices from nobitex or bitpin with selenium

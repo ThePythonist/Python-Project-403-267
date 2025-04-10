@@ -26,3 +26,8 @@ Fetch : seke imami, nim seke, rob seke, dollar, tala 18
 
 S7 :
 Fetch coin prices from nobitex or bitpin with selenium
+
+S8 :
+Read telepot documentation : https://telepot.readthedocs.io/en/latest/#installation
+Search about : https://www.pythonanywhere.com/
+Read pythonanywhere bot tutorial : https://blog.pythonanywhere.com/148/

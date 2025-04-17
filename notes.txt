@@ -31,3 +31,7 @@ S8 :
 Read telepot documentation : https://telepot.readthedocs.io/en/latest/#installation
 Search about : https://www.pythonanywhere.com/
 Read pythonanywhere bot tutorial : https://blog.pythonanywhere.com/148/
+
+S9 :
+Create a bot to send the user their numeric id
+Create a bot to translate english to persian

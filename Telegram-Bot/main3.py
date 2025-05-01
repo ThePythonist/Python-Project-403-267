@@ -2,6 +2,7 @@ from flask import Flask, request
 import telepot
 import urllib3
 from mytoken import mytoken
+from price_scrapper import fetch
 
 proxy_url = "http://proxy.server:3128"
 telepot.api._pools = {
@@ -31,11 +32,25 @@ def handle(msg):
                 msg['from']['first_name'])
 
             bot.sendMessage(chat_id, reply, reply_markup=reply_markup)
+        elif msg["text"] in ['سکه بهار آزادی', 'سکه امامی', 'ربع سکه', 'نیم سکه', "قیمت طلا", "قیمت دلار",
+                             "شاخص بورس تهران", "قیمت بیت کوین"]:
+
+            data = fetch(msg["text"])
+            if "result" in data:
+                reply = f"""
+        قیمت {msg['text']} در این لحظه : {data['result']}
+        """
+            elif "error" in data:
+                reply = data["error"]
+            else:
+                reply = "مشکلی پیش آمد"
+
+            bot.sendMessage(chat_id, reply)
         else:
-            reply = "XXXX"
+            reply = "ورودی نا معتبر"
             bot.sendMessage(chat_id, reply)
     else:
-        bot.sendMessage(chat_id, "Only text is allowed for translation")
+        bot.sendMessage(chat_id, "Only text is allowed")
 
 
 @app.route('/{}'.format(secret), methods=["POST"])

@@ -35,3 +35,11 @@ Read pythonanywhere bot tutorial : https://blog.pythonanywhere.com/148/
 S9 :
 Create a bot to send the user their numeric id
 Create a bot to translate english to persian
+
+S10 :
+Create a price bot with buttons that fetches prices from tgju
+Push your codes into a repository
+
+S11 :
+Create a sale bot with flow and state handling
+Install django, create a django project, run a django project
